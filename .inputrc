@@ -1,0 +1,10 @@
+$if Bash
+	"\C-p": history-search-backward
+	"\C-n": history-search-forward
+	"\e[A": history-search-backward
+	"\e[B": history-search-forward
+	set completion-ignore-case on
+	set meta-flag on
+	set convert-meta off
+	set output-meta on
+$endif

@@ -10,3 +10,10 @@ fi
 PATH=$PATH:$HOME/bin
 
 export PATH
+
+if [ $TERM == "xterm-256color" ]
+then
+	alias less='less -r'
+	alias ls='ls -F --color=tty --show-control-chars'
+fi
+
