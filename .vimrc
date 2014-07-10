@@ -8,6 +8,7 @@ set listchars=tab:>-
 set tabstop=4
 set shiftwidth=4
 set background=dark
+set laststatus=2
 
 set cursorline
 set cursorcolumn
@@ -21,6 +22,8 @@ set ignorecase smartcase
 
 set noswapfile
 set nobackup
+
+set imdisable
 
 " http://www.vim.org/scripts/script.php?script_id=2340
 colorscheme molokai
