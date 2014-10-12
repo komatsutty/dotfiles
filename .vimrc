@@ -37,4 +37,11 @@ inoremap $$ $$<left>
 inoremap <> <><left>
 inoremap `` ``<left>
 
+"GNU global
+noremap <C-g> :Gtags 
+noremap <C-i> :Gtags -f %<CR>
+noremap <C-j> :GtagsCursor<CR>
+noremap <C-n> :cn<CR>
+noremap <C-p> :cp<CR>
+
 " END OF FILE
