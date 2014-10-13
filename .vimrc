@@ -1,6 +1,31 @@
 syntax on
 
 set nocompatible
+filetype off
+
+if has('vim_starting')
+	set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'vim-scripts/svn-diff.vim'
+NeoBundle 'othree/eregex.vim'
+NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+let g:indent_guides_enable_on_vim_startup = 1
+
+NeoBundle 'surround.vim'
+
+call neobundle#end()
+filetype plugin indent on
+filetype indent on
+NeoBundleCheck
+
 set history=10000
 
 set list
