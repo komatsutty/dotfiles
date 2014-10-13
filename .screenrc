@@ -1,0 +1,20 @@
+startup_message off
+escape ^t^t
+shelltitle "$ |bash"
+hardstatus on
+hardstatus alwayslastline '%{= kw}%02c:%s %{= .y}%H %L=%{= .b}%-w%46>%{= .r}%n %t*%{= .b}%+w%-16=%{= .y}[%l]'
+multiuser on
+vbell off
+msgwait 5
+altscreen on
+defscrollback 8192
+defutf8 on
+defkanji utf-8
+encoding utf-8 utf-8
+defencoding utf-8
+term xterm-256color
+
+bind s eval 'split' 'focus' 'screen 1'
+bind | eval 'split -v' 'focus' 'screen 1'
+
+screen -t bash 0
