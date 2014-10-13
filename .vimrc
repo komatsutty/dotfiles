@@ -7,7 +7,6 @@ set list
 set listchars=tab:>-
 set tabstop=4
 set shiftwidth=4
-set background=dark
 set laststatus=2
 
 set cursorline
@@ -26,7 +25,20 @@ set nobackup
 set imdisable
 
 " http://www.vim.org/scripts/script.php?script_id=2340
+set background=dark
 colorscheme molokai
+
+" http://ethanschoonover.com/solarized
+let g:solarized_termcolors=16
+let g:solarized_termtrans=0
+let g:solarized_degrade=0
+let g:solarized_bold=1
+let g:solarized_underline=1
+let g:solarized_italic=1
+let g:solarized_contrast='normal'
+let g:solarized_visibility='normal'
+set background=light
+colorscheme solarized
 
 inoremap {} {}<LEFT>
 inoremap [] []<LEFT>
