@@ -12,10 +12,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'vim-scripts/svn-diff.vim'
 NeoBundle 'othree/eregex.vim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'tpope/vim-endwise'
+NeoBundle 't9md/vim-quickhl'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_enable_on_vim_startup = 1
 
@@ -80,5 +82,11 @@ noremap <C-i> :Gtags -f %<CR>
 noremap <C-j> :GtagsCursor<CR>
 noremap <C-n> :cn<CR>
 noremap <C-p> :cp<CR>
+
+"quickhl.vim
+nmap <Space>m <Plug>(quickhl-manual-this)
+xmap <Space>m <Plug>(quickhl-manual-this)
+nmap <Space>M <Plug>(quickhl-manual-reset)
+xmap <Space>M <Plug>(quickhl-manual-reset)
 
 " END OF FILE
