@@ -138,9 +138,6 @@ nnoremap Q <Nop>
 noremap <c-c> <Nop>
 noremap <c-c> <ESC>
 
-"Align things
-vnoremap <silent> <Enter> :EasyAlign<CR>
-
 if (exists('+colorcolumn'))
 	set colorcolumn=80
 	highlight ColorColumn ctermbg=9
