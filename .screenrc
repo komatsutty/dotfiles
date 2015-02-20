@@ -14,7 +14,10 @@ encoding utf-8 utf-8
 defencoding utf-8
 term xterm-256color
 
-bind s eval 'split' 'focus' 'screen 1'
-bind | eval 'split -v' 'focus' 'screen 1'
+bind s eval 'split' 'focus' 'screen' 'select 1'
+bind ^s eval 'split' 'focus' 'screen' 'select 1'
+bind | eval 'split -v' 'focus' 'screen' 'select 1'
+bind ^| eval 'split -v' 'focus' 'screen' 'select 1'
 
 screen -t bash 0
+

@@ -17,3 +17,5 @@ then
 	alias ls='ls -F --color=tty --show-control-chars'
 fi
 
+if [ -f ~/.custom_bashrc ]; then . ~/.custom_bashrc; fi
+
