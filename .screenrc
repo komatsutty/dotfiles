@@ -17,20 +17,17 @@ deflog on
 logfile 'log/screenlog.%H.%Y%m%d-%02c:%s-%n.log'
 logfile flush 2
 hardcopydir 'log'
-hardcopy_append on
 
-bind s eval 'split' 'focus' 'screen' 'select 1'
-bind ^s eval 'split' 'focus' 'screen' 'select 1'
-bind | eval 'split -v' 'focus' 'screen' 'select 1'
-bind ^| eval 'split -v' 'focus' 'screen' 'select 1'
+bind s eval 'split' 'focus' 'select 0'
+bind ^s eval 'split' 'focus' 'select 0'
+bind | eval 'split -v' 'focus' 'select 0'
+bind ^| eval 'split -v' 'focus' 'select 0'on
 
 screen -t bash 0
 
 setenv a ""
 setenv a "$a%{= kw}" # set attribute = {black(k) on White(w)}
 setenv a "$a%02c"    # hour and minute
-setenv a "$a:"       # colon
-setenv a "$a%s"      # time
 setenv a "$a "       # space
 setenv a "$a%{= .y}" # set attribute = {black(k) on Yellow(y)}
 setenv a "$a%H"      # hostname
