@@ -1,8 +1,6 @@
 startup_message off
 escape ^t^t
 shelltitle "$ |bash"
-hardstatus on
-hardstatus alwayslastline '%{= kw}%02c:%s %{= .y}%H %L=%{= .b}%-w%46>%{= .r}%n %t*%{= .b}%+w%-16=%{= .y}[%l]'
 multiuser on
 vbell off
 msgwait 5
@@ -13,6 +11,13 @@ defkanji utf-8
 encoding utf-8 utf-8
 defencoding utf-8
 term xterm-256color
+nethack on
+
+deflog on
+logfile 'log/screenlog.%H.%Y%m%d-%02c:%s-%n.log'
+logfile flush 2
+hardcopydir 'log'
+hardcopy_append on
 
 bind s eval 'split' 'focus' 'screen' 'select 1'
 bind ^s eval 'split' 'focus' 'screen' 'select 1'
@@ -21,3 +26,26 @@ bind ^| eval 'split -v' 'focus' 'screen' 'select 1'
 
 screen -t bash 0
 
+setenv a ""
+setenv a "$a%{= kw}" # set attribute = {black(k) on White(w)}
+setenv a "$a%02c"    # hour and minute
+setenv a "$a:"       # colon
+setenv a "$a%s"      # time
+setenv a "$a "       # space
+setenv a "$a%{= .y}" # set attribute = {black(k) on Yellow(y)}
+setenv a "$a%H"      # hostname
+setenv a "$a "       # space
+setenv a "$a%{= .w}" # set attribute = {black(k) on White(w)}
+setenv a "$a%-w"     # display window list priot to current one
+setenv a "$a%46>"
+setenv a "$a%{= .r}" # set attribute = {black(k) on Red(r)}
+setenv a "$a%n"      # current window number
+setenv a "$a "       # space
+setenv a "$a%t"      # current window titile
+setenv a "$a%{= .w}" # set attribute = {black(k) on White(w)}
+setenv a "$a%+w"     # display window list after current one
+setenv a "$a%-0="
+
+hardstatus on
+hardstatus alwayslastline "$a"
+unsetenv a

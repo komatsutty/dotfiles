@@ -90,7 +90,7 @@ colorscheme solarized
 "inoremap `` ``<left>
 
 "GNU global
-noremap <C-g> :Gtags 
+noremap <C-g> :Gtags<Space>
 noremap <C-i> :Gtags -f %<CR>
 noremap <C-j> :GtagsCursor<CR>
 noremap <C-n> :cn<CR>
