@@ -25,6 +25,7 @@ NeoBundle 'vim-scripts/diffchar.vim'
 let g:indent_guides_enable_on_vim_startup = 1
 NeoBundle 'kana/vim-fakeclip'
 NeoBundle 'bronson/vim-trailing-whitespace'
+NeoBundle 'rbgrouleff/bclose.vim'
 
 NeoBundle 'surround.vim'
 
