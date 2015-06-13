@@ -18,10 +18,16 @@ logfile 'log/screenlog.%H.%Y%m%d-%02c:%s-%n.log'
 logfile flush 2
 hardcopydir 'log'
 
-bind s eval 'split' 'focus' 'select 0'
+bind s  eval 'split' 'focus' 'select 0'
 bind ^s eval 'split' 'focus' 'select 0'
-bind | eval 'split -v' 'focus' 'select 0'
+bind |  eval 'split -v' 'focus' 'select 0'
 bind ^| eval 'split -v' 'focus' 'select 0'on
+bind r  eval 'command -c resize'
+bind ^r eval 'command -c resize'
+bind -c resize h eval 'resize -h -1' 'command -c resize'
+bind -c resize l eval 'resize -h +1' 'command -c resize'
+bind -c resize j eval 'resize -v +1' 'command -c resize'
+bind -c resize k eval 'resize -v -1' 'command -c resize'
 
 screen -t bash 0
 
