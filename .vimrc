@@ -19,8 +19,6 @@ NeoBundle 't9md/vim-quickhl'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'glidenote/octoeditor.vim'
 NeoBundle 'tpope/vim-liquid'
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'Shougo/vimproc'
 NeoBundle 'vim-scripts/diffchar.vim'
 let g:indent_guides_enable_on_vim_startup = 1
 NeoBundle 'kana/vim-fakeclip'
@@ -35,7 +33,7 @@ filetype indent on
 NeoBundleCheck
 
 syntax on
-set history=20000
+set history=10000
 
 set list
 set listchars=tab:>-
@@ -114,11 +112,6 @@ nnoremap [unite]b :<C-u>Unite<Space>bookmark<CR>
 nnoremap [unite]m :<C-u>Unite<Space>file_mru<CR>
 nnoremap [unite]r :<C-u>UniteWithBufferDir<Space>file<CR>
 nnoremap [unite]vr :UniteResume<CR>
-
-"vimshell
-nnoremap <silent> ,is :VimShell<CR>
-nnoremap <silent> ,ipy :VimShellInteractive python<CR>
-nnoremap <silent> ,irb :VimShellInteractive irb<CR>
 
 "octopress
 let g:octopress_path= '~/octopress'
